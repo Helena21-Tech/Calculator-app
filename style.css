@@ -1,0 +1,212 @@
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2rem;
+}
+.calculator{
+  height: 100vh;
+  padding: 10rem 0;
+}
+.calc-screen{
+  background-color: transparent;
+  height: 50vh;
+  width: 34rem;
+  margin:0 auto;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  margin-right: 2rem;
+}
+
+.toggle{
+  justify-content: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle span{
+margin: 0 0.5rem;
+}
+.toggle__slide{
+  height: 10px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.slide{
+  height: 10px;
+  width: 1.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*Main screen*/
+main{
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(100px, auto) repeat(5,70px);
+}
+.output{
+  grid-column: 1/-1;
+  grid-row: 1/1;
+  margin-bottom: 2rem;
+  display: flex;
+  font-size: 3rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.btn__grid{
+  grid-column: 1/-1;
+  grid-row: 2/-1;
+  display: grid;
+  grid-template-columns: repeat(4,80px);
+}
+
+.btn__grid > button{
+  font-weight: 700;
+  background: none;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin: 1rem;
+  color: white;
+  border-radius: 10px;
+}
+.lg{
+  grid-column: span 2;
+}
+/*Theme-1*/
+.theme-1 {
+  background-color: hsl(222, 26%, 31%);
+}
+.theme-1 .header{
+  color:white;
+}
+.theme-1 .toggle__slide{
+  background-color:hsl(224, 36%, 15%) ;
+}
+.theme-1 .slide{
+  background-color: hsl(6, 63%, 50%);
+}
+.theme-1 .output{
+  background-color: hsl(223, 31%, 20%);
+  color: white;
+}
+.theme-1 .btn__grid{
+  background-color: hsl(223, 31%, 20%);
+}
+.theme-1 .btn{
+  background-color: white;
+  border: 1px solid white;
+  color: hsl(225, 21%, 49%);
+  box-shadow: 0 2px hsl(0, 6%, 80%);
+}
+.theme-1 .command{
+  background-color:hsl(224, 28%, 35%);
+  border: 1px solid hsl(224, 28%, 35%);
+  box-shadow: 0 2px hsl(224, 36%, 15%);
+}
+.theme-1 .compute{
+  background-color: hsl(6, 63%, 50%);
+  border: 1px solid hsl(6, 63%, 50%) ;
+  box-shadow: 0 2px hsl(6, 70%, 34%);
+}
+/*Theme-2*/
+.theme-2 {
+  background-color: hsl(0, 0%, 93%);
+}
+.theme-2 .header {
+  color: hsl(60, 10%, 19%);
+}
+.theme-2 .toggle__slide {
+  background-color: hsl(0, 5%, 81%);
+}
+.theme-2 .slide {
+  background-color: hsl(25, 98%, 40%);
+  margin-left: 2.1rem;
+}
+.theme-2 .output {
+  background-color: white;
+  color: hsl(60, 10%, 19%);
+}
+.theme-2 .btn__grid {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.theme-2 .btn {
+  background-color: hsl(45, 7%, 89%);
+  border: 1px solid hsl(45, 7%, 89%);
+  color: hsl(60, 10%, 19%);
+  box-shadow: 0 2px hsl(35, 11%, 61%);
+}
+
+.theme-2 .command {
+  background-color: hsl(185, 42%, 37%);
+  border: 1px solid hsl(185, 42%, 37%);
+  box-shadow: 0 2px hsl(185, 58%, 25%);
+}
+
+.theme-2 .compute {
+  background-color: hsl(25, 98%, 40%);
+  border: 1px solid hsl(25, 98%, 40%);
+  box-shadow: 0 2px hsl(25, 99%, 27%);
+}
+
+/*Theme-3*/
+.theme-3 {
+  background-color: hsl(268, 75%, 9%);
+}
+.theme-3 .header {
+  color:  hsl(52, 100%, 62%);
+}
+.theme-3 .toggle__slide {
+  background-color: hsl(268, 71%, 12%);
+}
+.theme-3 .slide {
+  background-color: hsl(176, 100%, 44%);
+  margin-left: 4.2rem;
+}
+.theme-3 .output {
+  background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+.theme-3 .btn__grid {
+  background-color: hsl(268, 71%, 12%);
+}
+
+.theme-3 .btn {
+  background-color: hsl(268, 47%, 21%);
+  border: 1px solid hsl(268, 47%, 21%);
+  color: hsl(52, 100%, 62%);
+  box-shadow: 0 2px hsl(290, 70%, 36%);
+}
+
+.theme-3 .command {
+  background-color: hsl(281, 89%, 26%);
+  border: 1px solid hsl(281, 89%, 26%);
+  box-shadow: 0 2px hsl(285, 91%, 52%);
+}
+
+.theme-3 .compute {
+  color: hsl(198, 20%, 13%);
+  background-color: hsl(176, 100%, 44%);
+  border: 1px solid hsl(176, 100%, 44%);
+  box-shadow: 0 2px hsl(177, 92%, 70%);
+}
